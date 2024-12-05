@@ -17,7 +17,7 @@ namespace dangxlam.Function
 
         [Function(nameof(ServiceBusQueueTrigger1))]
         public async Task Run(
-            [ServiceBusTrigger("thequeue", Connection = "demoqueue1_SERVICEBUS")]
+            [ServiceBusTrigger("thequeue", Connection = "ServiceBusConnectionString")]
             ServiceBusReceivedMessage message,
             ServiceBusMessageActions messageActions)
         {
